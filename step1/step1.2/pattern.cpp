@@ -319,6 +319,7 @@ void p22(int n) {
 }
 
 int main() {
+    cout<<"<---Patterns using CPP!--->\n";
     int n;
     cout<<"enter size of pattern: \n";
     cin>>n;
