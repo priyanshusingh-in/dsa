@@ -11,10 +11,6 @@ void explainPair() {
     cout<<arr[0].second;
 }
 
-void practicePair(){
-
-}
-
 int main() {
     explainPair();
     return 0;
