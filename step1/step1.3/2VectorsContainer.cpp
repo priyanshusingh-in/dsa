@@ -13,15 +13,21 @@ void explainPairVector(){
     vector<pair<int,char>>pairVector;
     pairVector.emplace_back(2,'a');
     pairVector.emplace_back(4342,'r');
-    cout<<pairVector[1].second;
+    cout<<pairVector[1].second<<'\n';
 }
 
 void explainVector1(){
-
+    vector<int> v(5,23);
+    cout<<v[4]<<'\n';
+    cout<<v[2]<<'\n';
+    vector<char> v1(4,'a');
+    vector<char> v2(v1);
+    cout<<v2[0]<<'\n';
 }
 
 int main(){
     explainVector();
     explainPairVector();
+    explainVector1();
     return 0;
 }
