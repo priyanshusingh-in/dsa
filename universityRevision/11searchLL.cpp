@@ -3,7 +3,6 @@ using namespace std;
 
 struct node
     {
-        struct node *prev;
         int data;
         struct node *next;
     };
@@ -31,7 +30,7 @@ void addLast(struct node **head, int val)
     }
 }
 
-void displayForward(struct node *newnode)
+void display(struct node *newnode)
 {
     struct node *temp=head;
     while(newnode!=NULL)
@@ -42,18 +41,25 @@ void displayForward(struct node *newnode)
     printf("NULL\n");
 }
 
-
-
-void displayBackward(struct node *newnode)
+void searchItem(struct node *newnode, int itemToFind)
 {
-    struct node *temp=head;
-    while(newnode!=NULL)
+    cout<<"Item to Search: "<<itemToFind<<'\n';
+    int pos = 1;
+    while (newnode != NULL)
     {
-        printf("%d->",newnode->data);
-        newnode=newnode->prev;
+        if (itemToFind == newnode->data)
+        {
+            cout << "ITEM FOUND at NODE: " << pos << endl;
+            return;
+        }
+        pos++;
+        newnode = newnode->next;
     }
-    printf("NULL\n");
+
+    cout << "ITEM NOT FOUND!" << endl;
+    return;
 }
+
 
 
 int main()
@@ -64,10 +70,8 @@ int main()
     addLast(&head,30);
     addLast(&head,40);
     addLast(&head,50);
-
-
-    displayForward(head);
-    displayBackward(head);
+    display(head);
+    searchItem(head,50);
 
     return 0;
 }

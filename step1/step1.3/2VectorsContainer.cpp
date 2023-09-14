@@ -1,33 +1,42 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void explainVector(){
+int main()
+{
     vector<int> v;
-    v.emplace_back(33);
-    v.emplace_back(3);
-    v.emplace_back(332);
-    cout<<v[0]<<' '<<v[1]<<' '<<v[2]<<'\n';
-}
 
-void explainPairVector(){
-    vector<pair<int,char>>pairVector;
-    pairVector.emplace_back(2,'a');
-    pairVector.emplace_back(4342,'r');
-    cout<<pairVector[1].second<<'\n';
-}
+    cout<<"enter 10 values in vector: \n";
+    for(int i=0;i<10;i++)
+        v.emplace_back(i);
 
-void explainVector1(){
-    vector<int> v(5,23);
-    cout<<v[4]<<'\n';
-    cout<<v[2]<<'\n';
-    vector<char> v1(4,'a');
-    vector<char> v2(v1);
-    cout<<v2[0]<<'\n';
-}
+    cout<<"the elements in vector: ";
+    for(auto it=v.begin();it!=v.end();it++)
+        cout<<*it<<' ';
 
-int main(){
-    explainVector();
-    explainPairVector();
-    explainVector1();
+    cout<<"\nThe front element of vector: "<<v.front();
+    cout<<"\nThe last element of vector: "<<v.back();
+    cout<<"\nThe size of the vector: "<<v.size();
+    cout<<"\nDeleting element from the end: "<<v[v.size()-1];
+    v.pop_back();
+
+    cout<<"\nPrinting vector after removing last element: "<<endl;
+    for(int i=0;i<v.size();i++)
+        cout<<v[i]<<' ';
+
+    cout<<"\nInserting 5 at the beginning:"<<endl;
+    v.insert(v.begin(),5);
+    cout<<"First element is: "<<v[0]<<endl;
+    cout<<"erasing the first element"<<endl;
+    v.erase(v.begin());
+    cout<<"Now the first element is: "<<v[0]<<endl;
+
+    if(v.empty())
+        cout<<"\nVector is empty"<<endl;
+    else
+        cout<<"\nVector is not empty"<<endl;
+
+    v.clear();
+    cout<<"Size of vector after clearing the verctor: "<<v.size();
+
     return 0;
 }
