@@ -20,6 +20,9 @@ void vectorIterator()
      }
      cout<<'\n';
 
+     auto it3=v.rend();
+     auto it4=v.rbegin();
+
      cout<<v.back()<<'\n';
 
      for(auto iit=v.begin();iit!=v.end();iit++)
@@ -27,6 +30,33 @@ void vectorIterator()
          cout<<*(iit)<<' ';
      }
      cout<<'\n';
+
+     for(auto it : v)
+     {
+         cout<<it<<' ';
+     }
+     cout<<'\n';
+
+     //delete vector element
+     v.erase(v.begin()+1);
+     //delete vector element in range
+     v.erase(v.begin()+2,v.begin()+4);
+
+     //insert function vector
+     vector<int>v2(2,100);
+     v.insert(v.begin(),300);
+     v.insert(v.begin()+1,2,10);
+
+     vector<int>copy(2,50);
+     v.insert(v.begin(),copy.begin(),copy.end());
+
+     cout<<v2.size()<<'\n';
+
+     for(auto it : v2)
+     {
+         cout<<it<<'\n';
+     }
+
 }
 
 void unorderedSetIterator()
@@ -43,11 +73,9 @@ void unorderedSetIterator()
     cout<<'\n';
 }
 
-
-
 int main()
 {
      vectorIterator();
-     unorderedSetIterator();
+     //unorderedSetIterator();
      return 0;
 }
