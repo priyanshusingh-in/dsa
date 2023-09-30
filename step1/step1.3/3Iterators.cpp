@@ -73,9 +73,22 @@ void unorderedSetIterator()
     cout<<'\n';
 }
 
+void unorderedSetIteratorR1()
+{
+     unordered_set<int> s1;
+     for(int i=1;i<=10;i++)
+          s1.insert(i);
+
+     for(auto it=s1.begin();it!=s1.end();it++)
+     {
+          cout<<*it<<'\n';
+     }
+}
+
 int main()
 {
-     vectorIterator();
+     //vectorIterator();
      //unorderedSetIterator();
+     unorderedSetIteratorR1();
      return 0;
 }

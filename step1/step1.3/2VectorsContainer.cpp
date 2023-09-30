@@ -26,6 +26,7 @@ int main()
     cout<<"\nInserting 5 at the beginning:"<<endl;
     v.insert(v.begin(),5);
     cout<<"First element is: "<<v[0]<<endl;
+
     cout<<"erasing the first element"<<endl;
     v.erase(v.begin());
     cout<<"Now the first element is: "<<v[0]<<endl;
@@ -35,6 +36,19 @@ int main()
     else
         cout<<"\nVector is not empty"<<endl;
 
+    //for each loop
+    for(auto it : v)
+     {
+         cout<<it<<' ';
+     }
+     cout<<endl;
+    vector<int>v2(2,100);
+    v.swap(v2);
+    for(auto it:v2)
+    {
+        cout<<it<<' ';
+    }
+    cout<<endl;
     v.clear();
     cout<<"Size of vector after clearing the verctor: "<<v.size();
 
