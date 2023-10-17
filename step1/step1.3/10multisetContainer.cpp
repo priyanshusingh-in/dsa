@@ -42,4 +42,6 @@ int main()
     s.clear();
 
     cout<<"Size of the multiset after clearing all the elements: "<<s.size();
+
+    return 0;
 }
