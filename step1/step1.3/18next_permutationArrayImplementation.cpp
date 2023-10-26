@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int arr[]={1,3,2};
+    int arr[]={1,2,3};
 
     next_permutation(arr,arr+3);
 
