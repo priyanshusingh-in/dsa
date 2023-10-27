@@ -36,14 +36,19 @@ int main()
     else
         cout<<"\nVector is not empty"<<endl;
 
+    cout<<"The element at the last position is: "<<v.back()<<endl;
+    cout<<"Printing elements of the vector v1 using for each loop: \n";
     //for each loop
     for(auto it : v)
      {
          cout<<it<<' ';
      }
      cout<<endl;
+
+    cout<<"Creating a new vector v2 by copying all elements of vector v1: \n";
     vector<int>v2(2,100);
     v.swap(v2);
+    cout<<"Elements of vector v2: \n";
     for(auto it:v2)
     {
         cout<<it<<' ';
