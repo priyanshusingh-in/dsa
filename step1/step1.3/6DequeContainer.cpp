@@ -1,3 +1,7 @@
+//internal operation in doubly linked list
+//two types:
+//1)Input restricted Queue(input only one end)
+//2)Output restricted queue(output only one end)
 #include<bits/stdc++.h>
 using namespace std;
 

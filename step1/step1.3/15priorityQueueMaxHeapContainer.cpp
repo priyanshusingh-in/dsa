@@ -1,3 +1,8 @@
+//The lexographically largest element will remain at the top
+//internal operation is tree data structure is maintained
+//Data not maintained in a linear fashion
+//push and pop -> logn
+//top -> O(1)
 #include<bits/stdc++.h>
 using namespace std;
 

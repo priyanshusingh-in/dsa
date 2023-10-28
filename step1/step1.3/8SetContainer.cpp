@@ -1,3 +1,4 @@
+//stores everything in sorted order and unique
 #include<bits/stdc++.h>
 using namespace std;
 

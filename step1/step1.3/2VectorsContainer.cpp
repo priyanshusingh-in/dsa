@@ -1,3 +1,7 @@
+//dynamic size as compared to an array
+//internal operation in a singly linked list
+//only back operation
+
 #include<bits/stdc++.h>
 using namespace std;
 

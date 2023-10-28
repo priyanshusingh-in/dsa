@@ -2,7 +2,7 @@
 //LIFO-Last In First Out.
 //NO INDEXING
 //NO clear(); function
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+//All operations are happening in constant time: O(1)
 #include<bits/stdc++.h>
 using namespace std;
 
