@@ -4,8 +4,10 @@
 //syntax(ind stores the index of the element): int ind=lower_bound(a.begin(),a.end(),elementToSearch)-a.begin();
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
 //Q1.Find the first occurrence of a X in a sorted array.
 //if it does not exits, print -1
+/*
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -20,3 +22,6 @@ int main()
         cout<<-1;
     return 0;
 }
+*/
+
+
