@@ -13,7 +13,7 @@ using namespace std;
 int main()
 {
     int arr[]={1,4,4,4,4,9,9,10,11};
-    int l=sizeof(arr)/sizeof(arr[0]);
+    int l=sizeof(arr)/sizeof(arr[0]);//calculating the length of the array
     int x=4;
     int ind=upper_bound(arr,arr+l,x)-arr;
     ind--;
