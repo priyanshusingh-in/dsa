@@ -4,3 +4,25 @@
 //and then create a main function in which u have to allocate the memory to the obj dynamically,
 // make sure the consturctor and dest for both class should execute in proper order.
 
+#include<bits/stdc++.h>
+using namespace std;
+
+class student
+{
+    public:
+        void fun()
+        {
+            cout<<"inside class student";
+        }
+    
+    student()
+    {
+        "inside base constructor";
+    }
+
+};
+
+class student2:public student2()
+{
+
+};
