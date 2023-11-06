@@ -14,9 +14,9 @@ class student
     student(int c,string str,char *d)
     {
         err_code=c;
-        err_str=str;
+        err_str="sample";
         err_desc=new char[strlen(d)];
-        strcpy(err_desc,d);
+        strcpy(err_desc,err_str,d);
     }
     void err_display(void)
     {
