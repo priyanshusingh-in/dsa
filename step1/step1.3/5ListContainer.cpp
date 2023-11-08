@@ -1,6 +1,6 @@
 //Internal operation is a doubly linked list
-//allowes both front and back operation
-//push_front() is cheap as compared to insert() in vector
+//allows both front and back operation
+//push_front() in list is cheap as compared to insert() in vector
 
 #include<bits/stdc++.h>
 using namespace std;
