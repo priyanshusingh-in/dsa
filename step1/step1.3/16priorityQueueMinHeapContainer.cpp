@@ -5,10 +5,10 @@ void displayPriorityQueue(priority_queue<int,vector<int>,greater<int>>pq)
 {
     cout<<"The elements of the priority queue are: "<<endl;
     priority_queue<int,vector<int>,greater<int>>pq2=pq;
-    while(!pq.empty())
+    while(!pq2.empty())
     {
-        cout<<pq.top()<<'\n';
-        pq.pop();
+        cout<<pq2.top()<<'\n';
+        pq2.pop();
     }
 }
 
