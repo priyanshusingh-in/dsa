@@ -1,4 +1,5 @@
-//stores everything in sorted order and unique
+//stores everything in sorted order and unique elements
+//not a linear container but a tree in maintained in backend
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -24,11 +25,11 @@ int main()
     printSets(s);
 
     int n=2;
-    if(s.find(n)!=s.end())
+    if(s.find(n)!=s.end())//if element not found find() will return an iterator pointing right after the last element i.e. end()
     {
         cout<<n<<" is present in the set"<<endl;
     }
-
+    //erase(begin,end) -> [begin,end)
     cout<<"Deleting the first element: \n";
     s.erase(s.begin());
     printSets(s);
