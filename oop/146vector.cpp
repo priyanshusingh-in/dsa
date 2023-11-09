@@ -48,6 +48,9 @@ int main()
     for(auto it:v1)
         cout<<it<<'\t';
     cout<<endl;
-
+    
+    cout<<endl<<v1.size()<<endl;
+    v1.clear();
+    cout<<endl<<v1.size();
     return 0;
 }
