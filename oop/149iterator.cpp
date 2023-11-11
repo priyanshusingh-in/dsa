@@ -9,5 +9,5 @@ int main()
     {
         cout<<*i<<' ';
     }
-    cout<<end;
+    cout<<endl;
 }
