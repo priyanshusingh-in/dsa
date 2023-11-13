@@ -9,12 +9,16 @@ int main()
     cout<<'\n';
 
     int n=sizeof(arr)/sizeof(arr[0]);
-    int brr[n];
+    
+    int i=0,j=n-1;
+    while(i<j)
+    {
+        swap(arr[i],arr[j]);
+        i++;
+        j--;
+    }
 
-    for(int i=0;i<n;i++)
-        brr[i]=arr[n-1-i];
-
-    for(auto it:brr)
+    for(auto it:arr)
         cout<<it<<' ';
     cout<<'\n';
     
