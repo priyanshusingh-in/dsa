@@ -1,6 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+void printMatrix(int** a, int row, int col)
+{
+    for(int i=0;i<row;i++)
+    {
+        for(int j=0;j<col;j++)
+        {
+            cout<<a[i][j]<<'\t';
+        }
+        cout<<"\n\n";
+    }
+}
+
 void matrixMultiply(int** a, int row1, int col1, int** b, int row2, int col2)
 {
     if(col1 != row2)
@@ -33,15 +45,7 @@ void matrixMultiply(int** a, int row1, int col1, int** b, int row2, int col2)
     }
 
     cout<<"Matrix a[][] X b[][] =\n";
-
-    for(int i=0;i<row1;i++)
-    {
-        for(int j=0;j<col2;j++)
-        {
-            cout<<result[i][j]<<'\t';
-        }
-        cout<<"\n\n";
-    }
+    printMatrix(result,row1,col2);
 
     for(int i=0;i<row1;i++)
         delete[] result[i];
@@ -71,14 +75,7 @@ int main()
     }
     
     cout<<"1st Matrix:\n";
-    for(int i=0;i<row1;i++)
-    {
-        for(int j=0;j<col1;j++)
-        {
-            cout<<a[i][j]<<'\t';
-        }
-        cout<<"\n\n";
-    }
+    printMatrix(a,row1,col1);
 
     cout<<"enter row and coloum for 2nd matrix:";
     cin>>row2>>col2;
@@ -98,14 +95,8 @@ int main()
     }
 
     cout<<"2nd Matrix:\n";
-    for(int i=0;i<row2;i++)
-    {
-        for(int j=0;j<col2;j++)
-        {
-            cout<<b[i][j]<<'\t';
-        }
-        cout<<"\n\n";
-    }
+    printMatrix(b,row2,col2);
+    
 
     matrixMultiply(a,row1,col1,b,row2,col2);
 
