@@ -13,6 +13,19 @@ void printMatrix(int** a, int row, int col)
     }
 }
 
+void allocateMemory(int** a, int row, int col)
+{
+    for(int i=0;i<row;i++)
+        a[i]=new int[col];
+}
+
+void deallocateMemory(int** a, int row)
+{
+    for(int i=0;i<row;i++)
+        delete[] a[i];
+    delete[] a;
+}
+
 void matrixMultiply(int** a, int row1, int col1, int** b, int row2, int col2)
 {
     if(col1 != row2)
@@ -22,9 +35,9 @@ void matrixMultiply(int** a, int row1, int col1, int** b, int row2, int col2)
     }
 
     int** result=new int*[row1];
-    for(int i=0;i<row1;i++)
-        result[i]=new int[col2];
-
+    allocateMemory(result,row1,col2);
+    
+    //setting each value of result matrix = 0 
     for(int i=0;i<row1;i++)
     {
         for(int j=0;j<col2;j++)
@@ -47,9 +60,7 @@ void matrixMultiply(int** a, int row1, int col1, int** b, int row2, int col2)
     cout<<"Matrix a[][] X b[][] =\n";
     printMatrix(result,row1,col2);
 
-    for(int i=0;i<row1;i++)
-        delete[] result[i];
-    delete[] result;
+    deallocateMemory(result,row1);
 
 }
 
@@ -61,8 +72,7 @@ int main()
     cin>>row1>>col1;
 
     int** a=new int*[row1];
-    for(int i=0;i<row1;i++)
-        a[i]=new int[col1];
+    allocateMemory(a,row1,col1);
 
     cout<<"Input for 1st matrix: \n";
     for(int i=0;i<row1;i++)
@@ -81,8 +91,7 @@ int main()
     cin>>row2>>col2;
 
     int** b=new int*[row2];
-    for(int i=0;i<row2;i++)
-        b[i]=new int[col2];
+    allocateMemory(b,row2,col2);
 
     cout<<"Input for 2nd matrix: \n";
     for(int i=0;i<row2;i++)
@@ -97,16 +106,10 @@ int main()
     cout<<"2nd Matrix:\n";
     printMatrix(b,row2,col2);
     
-
     matrixMultiply(a,row1,col1,b,row2,col2);
 
-    for(int i=0;i<row1;i++)
-        delete[] a[i];
-    delete[] a;
-
-    for(int i=0;i<row2;i++)
-        delete[] b[i];
-    delete[] b;
+    deallocateMemory(a,row1);
+    deallocateMemory(b,row2);
 
     return 0;
 }
