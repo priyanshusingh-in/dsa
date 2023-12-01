@@ -1,6 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+void inputMatrix(int** a, int row, int col)
+{
+    for(int i=0;i<row;i++)
+    {
+        for(int j=0;j<col;j++)
+        {
+            cout<<"enter element at ["<<i<<"]["<<j<<"]: ";
+            cin>>a[i][j];
+        }
+    }
+}
+
 void printMatrix(int** a, int row, int col)
 {
     for(int i=0;i<row;i++)
@@ -46,6 +58,7 @@ void matrixMultiply(int** a, int row1, int col1, int** b, int row2, int col2)
         }
     }
 
+    //matrix multiplication
     for(int i=0;i<row1;i++)
     {
         for(int j=0;j<col2;j++)
@@ -75,14 +88,7 @@ int main()
     allocateMemory(a,row1,col1);
 
     cout<<"Input for 1st matrix: \n";
-    for(int i=0;i<row1;i++)
-    {
-        for(int j=0;j<col1;j++)
-        {
-            cout<<"enter element at ["<<i<<"]["<<j<<"]: ";
-            cin>>a[i][j];
-        }
-    }
+    inputMatrix(a,row1,col1);
     
     cout<<"1st Matrix:\n";
     printMatrix(a,row1,col1);
@@ -94,14 +100,7 @@ int main()
     allocateMemory(b,row2,col2);
 
     cout<<"Input for 2nd matrix: \n";
-    for(int i=0;i<row2;i++)
-    {
-        for(int j=0;j<col2;j++)
-        {
-            cout<<"enter element at ["<<i<<"]["<<j<<"]: ";
-            cin>>b[i][j];
-        }
-    }
+    inputMatrix(b,row2,col2);
 
     cout<<"2nd Matrix:\n";
     printMatrix(b,row2,col2);
