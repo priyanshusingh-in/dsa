@@ -13,8 +13,11 @@ void printNTimes(int n) {
 }
 
 int main() {
+
     int n;
     cin >> n;
+
     printNTimes(n);
+    
     return 0;
 }
