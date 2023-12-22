@@ -15,7 +15,6 @@ int main() {
 
     long long n;
     cin >> n;
-
     cout << sumFirstN(n);
 
     return 0;
