@@ -5,7 +5,7 @@ using namespace std;
 
 long long sumFirstN(long long n) {
     // Write your code here.
-    if(n <= 0)
+    if(n == 0)
         return 0;
     else
         return n + sumFirstN(n-1);
