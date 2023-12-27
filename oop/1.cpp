@@ -1,4 +1,4 @@
-//wap to display your name and perform +,-,/,*
+//wap to display your name and perform all basic arthimatic operations i.e. +,-,/,*
 
 #include<bits/stdc++.h>
 using namespace std;
