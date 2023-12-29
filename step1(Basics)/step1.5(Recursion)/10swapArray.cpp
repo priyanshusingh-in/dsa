@@ -24,5 +24,6 @@ int main() {
     cout << "reversed array elements:\n";
     for(auto it : arr)
         cout << it << ' ';
+    
     return 0;
 }
