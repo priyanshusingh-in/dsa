@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//function to reverse array using resursion
 void f(int i, int arr[], int n) {
     if(i>=n/2)
         return;
